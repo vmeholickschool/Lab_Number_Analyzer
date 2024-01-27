@@ -1,51 +1,55 @@
-﻿
-internal class Program
-{
-    private static void Main(string[] args)
-    {
-        
+﻿using System;
 
+class Program
+{
+    static void Main()
+    {
         Console.Write("What is your name? ");
         string userName = Console.ReadLine().Trim();
+        int userNumber = 0;
+        bool playAgain;
 
-        Console.Write("Enter an integer between 1 and 100 inclusive:");
-        int userNumber = int.Parse(Console.ReadLine());
-
-
-        if (userNumber <= 0 || userNumber > 100)
+        do
         {
-            Console.WriteLine($"{userName}, {userNumber} is not valid.");
-        }
-        else if (userNumber % 2 == 1 && userNumber < 60)
-        {
-            Console.WriteLine($"{userName}, {userNumber} is odd and less than 60.");
-        }
-        else if (userNumber % 2 == 0 && userNumber >= 2 && userNumber <= 24)
-        {
-            Console.WriteLine($"{userName}, {userNumber} is even and less than 25.");
-        }
-        else if (userNumber % 2 == 0 && userNumber >= 26 && userNumber <= 60)
-        {
-            Console.WriteLine($"{userName}, {userNumber} is even and between 26 and 60");
-        }
-        else if (userNumber % 2 == 0 && userNumber > 60)
-        {
-            Console.WriteLine($"{userName}, {userNumber} is Even and greater than 60.");
-        }
-        else if (userNumber % 2 == 1 && userNumber > 60)
-        {
-            Console.WriteLine($"{userName}, {userNumber} is Odd and greater than 60.");
-        }
+            Console.Write("Enter an integer between 1 and 100 inclusive: ");
 
-        else
-        {
-            Console.WriteLine($"{userName}, {userNumber} is not valid.");
-        }
+            while (!int.TryParse(Console.ReadLine(), out userNumber) || userNumber < 1 || userNumber > 100)
+            {
+                Console.Write($"{userName}, {userNumber} is not valid. Please enter an integer between 1 and 100 inclusive: ");
+            }
 
+            if (userNumber % 2 == 1 && userNumber < 60)
+            {
+                Console.WriteLine($"{userName}, {userNumber} is odd and less than 60.");
+            }
+            else if (userNumber % 2 == 0 && userNumber >= 2 && userNumber <= 24)
+            {
+                Console.WriteLine($"{userName}, {userNumber} is even and less than 25.");
+            }
+            else if (userNumber % 2 == 0 && userNumber >= 26 && userNumber <= 60)
+            {
+                Console.WriteLine($"{userName}, {userNumber} is even and between 26 and 60.");
+            }
+            else if (userNumber % 2 == 0 && userNumber > 60)
+            {
+                Console.WriteLine($"{userName}, {userNumber} is even and greater than 60.");
+            }
+            else if (userNumber % 2 == 1 && userNumber > 60)
+            {
+                Console.WriteLine($"{userName}, {userNumber} is odd and greater than 60.");
+            }
+            else
+            {
+                Console.WriteLine($"{userName}, {userNumber} is not valid.");
+            }
 
+            Console.Write("Do you want to play again? (y/n): ");
+            playAgain = Console.ReadLine().Trim().ToLower() == "y";
+        } while (playAgain);
 
-        Console.WriteLine($"{userName}, Thank you, for using the Number Analyzer!");
-
-        Console.ReadKey();
+        Console.WriteLine($"{userName}, Thank you for using the Number Analyzer!");
     }
 }
+
+
+
