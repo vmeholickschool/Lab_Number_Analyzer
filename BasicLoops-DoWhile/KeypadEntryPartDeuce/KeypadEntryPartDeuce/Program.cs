@@ -3,10 +3,9 @@
     private static void Main(string[] args)
     {
         bool doorLocked = true;
-        int numAttempts = 0;
-        int maxNumAttempts = 5;
+        int i = 0;
 
-        while (doorLocked && numAttempts < maxNumAttempts)
+        while (doorLocked && i < 5)
         {
             Console.Write("Enter your keycode: ");
             string userKeyCode = Console.ReadLine();
@@ -16,16 +15,20 @@
                 doorLocked = false;
                 Console.WriteLine("Welcome Home!");
             }
-
+            else
             {
-                if (numAttempts + 2 == maxNumAttempts)
+                i++;
+
+                if (i >= 5)
                 {
                     Console.WriteLine("You have now made too many incorrect attempts, the door cannot be unlocked at this time.");
                     break;
                 }
+                else
+                {
+                    Console.WriteLine("Wrong Code, please enter the correct keycode.");
+                }
             }
-
-            numAttempts++;
         }
 
         Console.ReadLine();
