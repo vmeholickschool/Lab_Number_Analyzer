@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoWhileDoorLockKeyPad", "DoWhileDoorLockKeyPad\DoWhileDoorLockKeyPad.csproj", "{187D4CC5-C08B-4D0E-B3AF-92797BA5B43D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{187D4CC5-C08B-4D0E-B3AF-92797BA5B43D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{187D4CC5-C08B-4D0E-B3AF-92797BA5B43D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{187D4CC5-C08B-4D0E-B3AF-92797BA5B43D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{187D4CC5-C08B-4D0E-B3AF-92797BA5B43D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E8C410B-401F-4429-9693-93F354E07622}
+	EndGlobalSection
+EndGlobal
