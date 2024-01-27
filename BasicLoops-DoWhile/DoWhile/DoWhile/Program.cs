@@ -5,7 +5,7 @@ bool userContinue;
 do
 {
     Console.WriteLine("Hello, World!\n Would you like to continue (yes/no) ?");
-    userContinue = Console.ReadLine().ToLower().Trim() == "yes" ? true : false;
+    userContinue = Console.ReadLine().ToLower().Trim() == "y" ? true : false;
     } while (userContinue == true);
 Console.WriteLine("Goodbye");
 Console.ReadKey();
