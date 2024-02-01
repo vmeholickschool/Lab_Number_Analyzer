@@ -9,19 +9,12 @@ internal class Program
     {
         Random randomGenerator = new Random();
         int diceRoll = randomGenerator.Next(1,30);
-
+    
+        
         Console.WriteLine("Welcome to Grand Circus Casino! ");
         Console.WriteLine("Please enter the number of sides for a pair of dice: ");
-        string line = Console.ReadLine();
-        
-        try
-        {
-            int num = int.Parse(line);
+        int number = int.Parse(Console.ReadLine());
         }
-        catch (FormatException)
-        {
-            Console.WriteLine("Your response is invalid, please enter a numeric value: ");
-        }
-        
+    
     }
 }
