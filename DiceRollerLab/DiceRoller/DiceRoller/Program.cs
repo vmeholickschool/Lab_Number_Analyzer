@@ -14,7 +14,15 @@ internal class Program
         Console.WriteLine("Welcome to Grand Circus Casino! ");
         Console.WriteLine("Please enter the number of sides for a pair of dice: ");
         int number = int.Parse(Console.ReadLine());
+        {
+            if (number > 0) {
+                Console.WriteLine($"You have selected {number} sides for your die: ");
+            }
+            else
+            {
+                Console.WriteLine("Your entry is invalid. Please select a numeric value: ");
+            }
+        }
         }
     
     }
-}
